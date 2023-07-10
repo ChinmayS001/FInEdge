@@ -3,18 +3,18 @@ import lending from '../images/Lending.png'
 import {useEffect,useState,useRef} from 'react'
 import './Services.css'
 const Services = () => {
-  //console.log("Getting Executed2")
+
 
   let idx = 0
   let img = useRef(null);
-  //let var2 = useRef(null);
+
   function run() {
     idx++
     changeImage()
 }
 function changeImage() {
   let no = img.current.childElementCount;
- // console.log(img.current.childElementCount); 
+
   if(idx > no - 1) {
       idx = 0
   } else if(idx < 0) {
@@ -22,7 +22,7 @@ function changeImage() {
   }
 
    img.current.style.transform = `translateX(${-idx * 750}px)`;
-  //console.log(img);
+
 }
 
   useEffect(() => {
